@@ -8,8 +8,12 @@
 
 import Foundation
 
-struct Person {
+struct Person: Decodable {
     let name: String
     let birthYear: String
     let height: String
+}
+
+struct PersonSearch: Decodable {
+    let results: [Person]
 }

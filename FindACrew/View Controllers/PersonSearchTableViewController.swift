@@ -12,7 +12,11 @@ class PersonSearchTableViewController: UITableViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     
-    let leia = Person(name: "Leia Organa", birthYear: "19BBY", height: "150")
+    let personController = PersonController()
+    
+
+    
+//    let leia = Person(name: "Leia Organa", birthYear: "19BBY", height: "150")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,22 +30,28 @@ class PersonSearchTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return personController.crew.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PersonTableViewCell.reuseIdentifier, for: indexPath) as! PersonTableViewCell
 
         // Configure the cell...
-        cell.nameLabel.text = leia.name
-        cell.heightLabel.text = "\(leia.height) cm"
-        cell.birthYearLabel.text = "Born \(leia.birthYear)"
+        let crewMate = personController.crew[indexPath.row]
+        cell.person = crewMate
         return cell
     }
 }
 
 extension PersonSearchTableViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchTerm = searchBar.text else { return }
+        searchBar.resignFirstResponder()
         
+        self.personController.searchForPeopleWith(searchTerm: searchTerm) {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
 }
