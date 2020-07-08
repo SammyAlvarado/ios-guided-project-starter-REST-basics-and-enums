@@ -16,6 +16,7 @@
 		CE414D5824606A0600E54457 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE414D5724606A0600E54457 /* PersonTableViewCell.swift */; };
 		CE414D652460ACF500E54457 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE414D642460ACF500E54457 /* Person.swift */; };
 		CE414D672460AE7800E54457 /* PersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE414D662460AE7800E54457 /* PersonController.swift */; };
+		E1181C0F246F766100844E52 /* individualPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1181C0E246F766100844E52 /* individualPerson.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CE414D5724606A0600E54457 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		CE414D642460ACF500E54457 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		CE414D662460AE7800E54457 /* PersonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonController.swift; sourceTree = "<group>"; };
+		E1181C0E246F766100844E52 /* individualPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = individualPerson.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				CE414D642460ACF500E54457 /* Person.swift */,
+				E1181C0E246F766100844E52 /* individualPerson.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				CE414D652460ACF500E54457 /* Person.swift in Sources */,
 				CE414D56246069F600E54457 /* PersonSearchTableViewController.swift in Sources */,
 				CE414D422460694900E54457 /* AppDelegate.swift in Sources */,
+				E1181C0F246F766100844E52 /* individualPerson.swift in Sources */,
 				CE414D5824606A0600E54457 /* PersonTableViewCell.swift in Sources */,
 				CE414D672460AE7800E54457 /* PersonController.swift in Sources */,
 				CE414D442460694900E54457 /* SceneDelegate.swift in Sources */,
